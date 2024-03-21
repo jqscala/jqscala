@@ -1,29 +1,38 @@
-##
-## Scala-specific
-##
-*.class
-*.log
+# macOS
+.DS_Store
 
 # sbt specific
-.cache
-.history
-.lib/
 dist/*
 target/
-**/target/
 lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
+project/local-plugins.sbt
+.history
+.ensime
+.ensime_cache/
+.sbt-scripted/
+local.sbt
+
+# Bloop
+.bsp
+
+# VS Code
+.vscode/
+
+# Metals
+.bloop/
+.metals/
+metals.sbt
+
+# IDEA
+.idea
+.idea_modules
+/.worksheet/
 
 
-# Scala-IDE specific
-.scala_dependencies
-.worksheet
-
-##
-## ECLIPSE-Specific.
-##
+# ECLIPSE-Specific.
 *.pydevproject
 .metadata
 .gradle
@@ -35,20 +44,15 @@ tmp/
 local.properties
 .settings/
 .loadpath
-# External tool builders
 .externalToolBuilders/
-# Locally stored "Eclipse launch configurations"
 *.launch
-# sbteclipse plugin
 .target
 
 # Ensime specific
 .ensime
 .ensime_lucene/
 
-##
-## emacs-specific.
-##
+# emacs-specific.
 *~
 \#*\#
 /.emacs.desktop
@@ -74,11 +78,7 @@ tramp
 # cask packages
 .cask/
 
-
-
-##
-## SUBLIME-Specific.
-##
+# SUBLIME-Specific.
 # cache files for sublime text
 *.tmlanguage.cache
 *.tmPreferences.cache
@@ -91,51 +91,3 @@ tramp
 # sftp configuration file
 sftp-config.json
 
-##
-## Idea
-##
-
-.idea/
-**/.idea/
-MANIFEST
-build
-dist
-_build
-docs/man/*.gz
-docs/source/api/generated
-docs/source/config.rst
-docs/gh-pages
-notebook/i18n/*/LC_MESSAGES/*.mo
-notebook/i18n/*/LC_MESSAGES/nbjs.json
-notebook/static/components
-notebook/static/style/*.min.css*
-notebook/static/*/js/built/
-notebook/static/*/built/
-notebook/static/built/
-notebook/static/*/js/main.min.js*
-notebook/static/lab/*bundle.js
-node_modules
-*.py[co]
-__pycache__
-*.egg-info
-*~
-*.bak
-.ipynb_checkpoints
-.tox
-.DS_Store
-\#*#
-.#*
-.coverage
-.pytest_cache
-
-*.swp
-*.map
-.idea/
-Read the Docs
-config.rst
-
-/.project
-/.pydevproject
-
-package-lock.json
-geckodriver.log
