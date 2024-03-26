@@ -24,7 +24,7 @@ This embedding follows the principles of DSL design in general, and the particul
 
 In summary, the bulk of the implementation is given by the following files: 
 
-src
+`src
 ├── main
 │   └── scala
 │       └── jq
@@ -41,7 +41,7 @@ src
             ├── <Filter1>Spec.scala
             ├── ...
             ├── JqSpec.scala
-            └── StdSpec.scala
+            └── StdSpec.scala`
 
 ## Implementing a new filter
 
