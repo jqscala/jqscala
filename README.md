@@ -2,7 +2,9 @@
 
 This repository is intended to contain the syntax and standard semantics of the Scala embedding of the [`jq`](https://jqlang.github.io/jq/) language. 
 
-Particular interpreters for specific streaming libraries, like `fs2`, `Akka Streaming`, `ZIO Streams`, etc., will be found in their corresponding repositories. These will be hosted at the parent organization [jqscala](https://github.com/jqscala) or elsewhere. 
+Particular interpreters for specific streaming libraries, like `fs2`, `Akka Streaming`, `ZIO Streams`, etc., can be found in their corresponding repositories (hosted at the parent organization [jqscala](https://github.com/jqscala) or elsewhere):
+
+* [Fs2 implementation](https://github.com/jqscala/jq-fs2)
 
 ## Current status
 
