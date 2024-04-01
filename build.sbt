@@ -3,20 +3,21 @@ val circeVersion = "0.14.1"
 val scalatestVersion = "3.2.9"
 val fs2Version = "3.8.0"
 
-inThisBuild(List(
-  organization := "io.github.jqscala",
-  homepage := Some(url("https://github.com/jqscala/jqscala")),
-  licenses := List("Creative Commons" -> url("https://creativecommons.org/licenses/by-nc-sa/4.0/")),
-  developers := List(
-    Developer(
-      "Juan Manuel Serrano Hidalgo",
-      "juanmanuel.serrano@hablapps.com",
-      "info@hablapps.com",
-      url("https://hablapps.com")
-    )
-    // add more devs here
+ThisBuild / organization := "io.github.jqscala"
+ThisBuild / homepage := Some(url("https://github.com/jqscala/jqscala"))
+ThisBuild / licenses := List("Creative Commons" -> url("https://creativecommons.org/licenses/by-nc-sa/4.0/"))
+ThisBuild / developers := List(
+  Developer(
+    "Juan Manuel Serrano Hidalgo",
+    "juanmanuel.serrano@hablapps.com",
+    "info@hablapps.com",
+    url("https://hablapps.com")
   )
-))
+  // add more devs here
+)
+
+ThisBuild / sonatypeCredentialHost := "s01.oss.sonatype.org"
+ThisBuild / sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
 
 lazy val root = project
   .in(file("."))
