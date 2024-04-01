@@ -15,10 +15,7 @@ inThisBuild(List(
       url("https://hablapps.com")
     )
     // add more devs here
-  ),
-
-  ThisBuild / sonatypeCredentialHost := "s01.oss.sonatype.org",
-  sonatypeRepository := "https://s01.oss.sonatype.org/service/local",
+  )
 ))
 
 lazy val root = project
