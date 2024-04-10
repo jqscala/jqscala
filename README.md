@@ -1,4 +1,9 @@
 # Jq Scala
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/jqscala/jqscala?label=Latest%20release&logo=github)](https://github.com/jqscala/jqscala/releases/latest)
+[![GitHub Release Date](https://img.shields.io/github/release-date/jqscala/jqscala?display_date=published_at&logo=github&label=Release%20date&link=https%3A%2F%2Fgithub.com%2Fjqscala%2Fjqscala%2Freleases%2Flatest)](https://github.com/jqscala/jqscala/releases/latest)
+[![Scala CI](https://github.com/jqscala/jqscala/actions/workflows/scala.yml/badge.svg?branch=main)](https://github.com/jqscala/jqscala/actions/workflows/scala.yml)
+[![Release](https://github.com/jqscala/jqscala/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/jqscala/jqscala/actions/workflows/release.yml)
+[![Codecov](https://codecov.io/gh/jqscala/jqscala/graph/badge.svg?token=3SMUFD4MXB)](https://codecov.io/gh/jqscala/jqscala)
 
 This repository is intended to contain the syntax and standard semantics of the Scala embedding of the [`jq`](https://jqlang.github.io/jq/) language. 
 
