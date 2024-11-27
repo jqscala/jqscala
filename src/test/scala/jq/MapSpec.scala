@@ -1,12 +1,12 @@
 package jq
 
-trait MapSpec[R](using Jq[R], RunnableFilter[R]):
+trait MapSpec[R: Jq, J: Json](using RunnableFilter[R, J]):
     self: JqBaseSpec =>
 
     "Map" should "work" in: 
-        val input = List(List(1,2,3), List(), List(1))
+        val input = List(Json[J].arr(1.num,2.num,3.num), Json[J].arr(), Json[J].arr(1.num))
 
-        input.through[List[Int]](map(id)) shouldBe input 
+        input.throughJson(map(id)) shouldBe input 
 
-        input.through[List[String]](map(str("dummy"))) shouldBe 
-            List(List("dummy","dummy","dummy"), List(), List("dummy"))
+        input.throughJson(map(str("dummy"))) shouldBe 
+            List(Json[J].arr("dummy".str,"dummy".str,"dummy".str), Json[J].arr(), Json[J].arr("dummy".str))

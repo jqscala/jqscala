@@ -2,7 +2,7 @@ val scala3Version = "3.3.0"
 val circeVersion = "0.14.1"
 val scalatestVersion = "3.2.9"
 
-ThisBuild / organization := "io.github.jqscala"
+ThisBuild / organization := "jqscala"
 ThisBuild / homepage := Some(url("https://github.com/jqscala/jqscala"))
 ThisBuild / licenses := List("Creative Commons" -> url("https://creativecommons.org/licenses/by-nc-sa/4.0/"))
 ThisBuild / developers := List(
@@ -22,10 +22,12 @@ lazy val root = project
   .in(file("."))
   .settings(
     name := "jqscala",
+    version := "0.1.0-DECOUPLING",
 
     scalaVersion := scala3Version,
 
     Test / packageBin / publishArtifact := true,
+    Test / packageSrc / publishArtifact := true,
 
     libraryDependencies ++= Seq(
       "io.circe" %% "circe-core" % circeVersion,
