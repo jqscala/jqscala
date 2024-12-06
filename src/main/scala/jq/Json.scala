@@ -1,19 +1,17 @@
 package jq
 
-import io.circe._
+trait Json[J]:
+  
+    extension (i: Int)
+        def num: J
 
-object IsArray: 
-    def unapply(v: Json): Option[Vector[Json]] = 
-        v.asArray
+    extension (i: String)
+        def str: J
 
-object IsObject: 
-    def unapply(v: Json): Option[JsonObject] = 
-        v.asObject
+    def obj(kv: (String, J)*): J
 
-object IsString: 
-    def unapply(v: Json): Option[String] = 
-        v.asString
+    def arr(elems: J*): J
 
-object IsInt: 
-    def unapply(v: Json): Option[Int] = 
-        v.asNumber.flatMap(_.toInt)
+object Json:
+
+    def apply[J](using j: Json[J]): Json[J] = j
