@@ -10,10 +10,13 @@ This repository is intended to contain the syntax and standard semantics of the 
 Particular interpreters for specific streaming libraries, like `fs2`, `Akka Streaming`, `ZIO Streams`, etc., can be found in their corresponding repositories (hosted at the parent organization [jqscala](https://github.com/jqscala) or elsewhere):
 
 * [Fs2 implementation](https://github.com/jqscala/jq-fs2)
+* [ZIO implementation](https://github.com/jqscala/jq-zio)
 
 ## Current status
 
 This project originated from the slides and notebooks used in the talk [Embedding external DSLs in Scala: Why and How?](https://github.com/hablapps/embeddinginscala) and the related [training](https://scaladays.org/workshops/embedding-of-domain-specific-languages-in-scala) at Scala Days Madrid 2023.
+
+Also, you can watch this [Lambda Days 2024 talk](https://youtu.be/L5bOMfLg6Bk?si=TZ9iWZFYX0as1APU).
 
 Currently, this repository just contains a preliminary implementation of a few jq filters. This is very much work in progress. 
 
