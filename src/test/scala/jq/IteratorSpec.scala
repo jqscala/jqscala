@@ -1,18 +1,15 @@
 package jq
 
-import io.circe.Json
-import io.circe.syntax._
-
-trait IteratorSpec[R](using Jq[R], RunnableFilter[R]):
+trait IteratorSpec[R: Jq, J: Json](using RunnableFilter[R, J]):
     self: JqBaseSpec =>
 
     "The iterator filter" should "expand objects and arrays" in:
 
-        List(Json.obj("a" -> 1.asJson, "b" -> 2.asJson))
-            .through[Int](iterator) shouldBe 
-                List(1, 2)
+        List(Json[J].obj("a" -> 1.num, "b" -> 2.num))
+            .throughJson(iterator) shouldBe 
+                List(1.num, 2.num)
 
-        List(List(1,2,3))
-            .through[Int](iterator) shouldBe 
-                List(1, 2, 3)
+        List(Json[J].arr(1.num, 2.num, 3.num))
+            .throughJson(iterator) shouldBe 
+                List(1.num, 2.num, 3.num)
 

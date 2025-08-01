@@ -1,14 +1,14 @@
 package jq
 
-trait IdentitySpec[R](using Jq[R], RunnableFilter[R]):
+trait IdentitySpec[R: Jq, J: Json](using RunnableFilter[R, J]):
     self: JqBaseSpec =>
 
     "The identity filter" should "return the same input" in:
 
-        List("a", "b", "c")
-            .through[String](id) shouldBe 
-                List("a", "b", "c")
+        List("a".str, "b".str, "c".str)
+            .throughJson(id) shouldBe 
+                List("a".str, "b".str, "c".str)
 
-        List[String]()
-            .through[String](id) shouldBe 
+        List[J]()
+            .throughJson(id) shouldBe 
                 List()
